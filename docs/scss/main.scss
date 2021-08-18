@@ -1,0 +1,86 @@
+// colores
+$color-principal:Black;
+$color-secundario:gray;
+$color-terciario: white;
+
+//texto
+$tipoPrincipal: Century Gothic, sans-serif;
+
+// clases
+%titulos {
+    font-family: $tipoPrincipal;
+    font-weight: bold;
+}
+
+%texto-general {
+    font-family: $tipoPrincipal;
+    color: $color-terciario;
+}
+
+h1 {
+    @extend %texto-general;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+h2, h3, h4, p {
+    @extend %texto-general;
+    text-align: center;
+    
+}
+
+body {
+    background-color: $color-principal;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.navbar {
+    background-color: $color-secundario;
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    margin-top: 50px;
+}
+
+.container > div {
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
+
+.card {
+    background: linear-gradient(to bottom, $color-principal , $color-secundario 100%, $color-principal);
+    border-radius: 10%;
+}
+
+.card-text {
+    @extend %texto-general;
+    text-align: justify;
+}
+
+.card-title {
+    font-weight: bold;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+h5 {
+    color: $color-terciario;
+    text-align: center;
+}
+
+
+
+
+
+

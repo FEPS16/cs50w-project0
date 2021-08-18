@@ -1,0 +1,64 @@
+.card-text, h2, h3, h4, p, h1 {
+  font-family: Century Gothic, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+h2, h3, h4, p {
+  text-align: center;
+}
+
+body {
+  background-color: Black;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.navbar {
+  background-color: gray;
+  font-family: Century Gothic, sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  margin-top: 50px;
+}
+
+.container > div {
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
+.card {
+  background: linear-gradient(to bottom, Black, gray 100%, Black);
+  border-radius: 10%;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.card-title {
+  font-weight: bold;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+h5 {
+  color: white;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
