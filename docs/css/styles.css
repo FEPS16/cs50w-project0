@@ -1,23 +1,85 @@
-.card-text, h2, h3, h4, p, h1 {
+#galaxias, #agujeros-negros, #estrellas, #satelites-naturales, #planeta, #asteroide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.tabla-comun {
   font-family: Century Gothic, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.tabla-comun .tabla-elemento:hover {
+  background-color: white;
+}
+.tabla-comun .tabla-fila .tabla-subtitulo {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: gray;
+  color: white;
+}
+.tabla-comun .tabla-fila .tabla-elemento:hover {
+  background-color: gray;
+  color: Black;
+}
+.tabla-comun .tabla-fila .tabla-elemento {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.titulos {
+  font-family: Century Gothic, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.container-cards .card-title, .subtitulos {
+  font-family: Century Gothic, sans-serif;
+  font-weight: bold;
   color: white;
 }
 
-h1 {
-  font-weight: bold;
-  text-align: center;
+.container-cards .card .card-text, .parrafo-comun, .lista-comun-desordenada, .tabla-comun .tabla-fila .tabla-elemento {
+  font-family: Century Gothic, sans-serif;
+  color: white;
+  text-align: justify;
+}
+
+div {
+  overflow-x: auto;
+}
+
+.titulos {
   margin-top: 100px;
   margin-bottom: 50px;
 }
 
-h2, h3, h4, p {
-  text-align: center;
+.subtitulos {
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
-body {
+.cuerpo-principal {
   background-color: Black;
   padding-right: 10%;
   padding-left: 10%;
+}
+
+.cuerpo-textual {
+  background: rgba(0, 0, 0, 0.7);
+  margin-right: 15%;
+  margin-left: 15%;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 .navbar {
@@ -26,39 +88,90 @@ body {
   font-weight: bold;
 }
 
-.container {
+.container-cards {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 5%;
   margin-top: 50px;
 }
-
-.container > div {
-  font-size: 20px;
-  margin: 20px;
-  padding: 20px;
-  width: 200px;
-}
-
-.card {
-  background: linear-gradient(to bottom, Black, gray 100%, Black);
-  border-radius: 10%;
-}
-
-.card-text {
-  text-align: justify;
-}
-
-.card-title {
+.container-cards .card-title {
+  text-align: center;
   font-weight: bold;
   height: 40px;
   padding-top: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+}
+.container-cards .card {
+  background: linear-gradient(to top, Black, gray 100%);
+  border-radius: 15%;
+  margin-right: 4.8%;
+  margin-left: 4.8%;
+}
+.container-cards .card .card-text {
+  padding-top: 10px;
+}
+.container-cards .card:hover {
+  background: linear-gradient(to top, gray, Black 100%);
 }
 
-h5 {
-  color: white;
-  text-align: center;
+.container-cards > div {
+  margin-bottom: 80px;
+  padding-top: 1px;
+}
+
+#asteroide {
+  background-image: url(../images/fondo-asteroides.jpg);
+}
+
+#planeta {
+  background-image: url(../images/fondo-planetas.jpg);
+}
+
+#satelites-naturales {
+  background-image: url(../images/fondo-satelites-naturales.jpg);
+}
+
+#estrellas {
+  background-image: url(../images/fondo-estrella.jpg);
+}
+
+#agujeros-negros {
+  background-image: url(../images/fondo-agujero-negro.jpg);
+}
+
+#galaxias {
+  background-image: url(../images/fondo-galaxia.jpg);
+}
+
+@media only screen and (max-width: 767px) {
+  #asteroide {
+    background-image: none;
+    background-color: Black;
+  }
+
+  #planeta {
+    background-image: none;
+    background-color: Black;
+  }
+
+  #satelites-naturales {
+    background-image: none;
+    background-color: Black;
+  }
+
+  #estrellas {
+    background-image: none;
+    background-color: Black;
+  }
+
+  #agujeros-negros {
+    background-image: none;
+    background-color: Black;
+  }
+
+  #galaxias {
+    background-image: none;
+    background-color: Black;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

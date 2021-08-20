@@ -1,86 +1,216 @@
-// colores
+// variables
 $color-principal:Black;
 $color-secundario:gray;
 $color-terciario: white;
-
-//texto
 $tipoPrincipal: Century Gothic, sans-serif;
 
 // clases
+%imagen-fondo {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+%tablas {
+    font-family: $tipoPrincipal;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .tabla-elemento:hover {background-color: $color-terciario;}
+
+    .tabla-fila {
+
+        .tabla-subtitulo {
+            border: 1px solid #ddd;
+            padding: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: $color-secundario;
+            color: $color-terciario;
+            
+        }
+
+        .tabla-elemento:hover {
+            background-color: $color-secundario;
+            color: $color-principal;
+        }
+
+        .tabla-elemento {
+            @extend %parrafo-comun;
+            border: 1px solid #ddd;
+            padding: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+}
+
 %titulos {
     font-family: $tipoPrincipal;
     font-weight: bold;
+    color: $color-terciario;
+    text-align: center;
 }
 
-%texto-general {
+%subtitulos {
     font-family: $tipoPrincipal;
+    font-weight: bold;
     color: $color-terciario;
 }
 
-h1 {
-    @extend %texto-general;
-    font-weight: bold;
-    text-align: center;
+%parrafo-comun {
+    font-family: $tipoPrincipal;
+    color: $color-terciario;
+    text-align: justify;
+}
+
+
+//estilos
+.lista-comun-desordenada {
+    @extend %parrafo-comun;
+}
+
+div {
+    overflow-x:auto;
+}
+
+.tabla-comun {
+    @extend %tablas;
+}
+
+.titulos {
+    @extend %titulos;
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-h2, h3, h4, p {
-    @extend %texto-general;
-    text-align: center;
-    
+.subtitulos {
+    @extend %subtitulos;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
-body {
+.parrafo-comun {
+    @extend %parrafo-comun;
+}
+
+.cuerpo-principal {
     background-color: $color-principal;
     padding-right: 10%;
     padding-left: 10%;
 }
 
+.cuerpo-textual {
+    background: rgb(0,0,0,0.7);
+    margin-right: 15%;
+    margin-left: 15%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
 .navbar {
     background-color: $color-secundario;
-    font-family: Century Gothic, sans-serif;
+    font-family: $tipoPrincipal;
     font-weight: bold;
 }
 
-.container {
+.container-cards{
     display: flex;
     flex-wrap: wrap;
-    padding-left: 5%;
     margin-top: 50px;
+    .card-title {
+        @extend %subtitulos;
+        text-align: center;
+        font-weight: bold;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    .card {
+        background: linear-gradient(to top, $color-principal, $color-secundario 100%);
+        border-radius: 15%;
+        margin-right: 4.8%;
+        margin-left: 4.8%;
+        .card-text {
+            @extend %parrafo-comun;
+            padding-top:10px;
+        }
+    }
+
+    .card:hover {
+        background: linear-gradient(to top, $color-secundario, $color-principal 100%);
+    }
 }
 
-.container > div {
-    font-size: 20px;
-    margin: 20px;
-    padding: 20px;
-    width: 200px;
+.container-cards > div {
+    margin-bottom: 80px;
+    padding-top: 1px;
 }
 
-.card {
-    background: linear-gradient(to bottom, $color-principal , $color-secundario 100%, $color-principal);
-    border-radius: 10%;
+#asteroide{    
+    background-image: url(../images/fondo-asteroides.jpg);
+    @extend %imagen-fondo
 }
 
-.card-text {
-    @extend %texto-general;
-    text-align: justify;
+#planeta{    
+    background-image: url(../images/fondo-planetas.jpg);
+    @extend %imagen-fondo
 }
 
-.card-title {
-    font-weight: bold;
-    height: 40px;
-    padding-top: 10px;
-    padding-bottom: 50px;
+#satelites-naturales {    
+    background-image: url(../images/fondo-satelites-naturales.jpg);
+    @extend %imagen-fondo
 }
 
-h5 {
-    color: $color-terciario;
-    text-align: center;
+#estrellas {    
+    background-image: url(../images/fondo-estrella.jpg);
+    @extend %imagen-fondo
 }
 
+#agujeros-negros {    
+    background-image: url(../images/fondo-agujero-negro.jpg);
+    @extend %imagen-fondo
+}
 
+#galaxias {    
+    background-image: url(../images/fondo-galaxia.jpg);
+    @extend %imagen-fondo
+}
 
+@media only screen and (max-width: 767px) {
 
+    #asteroide {    
+        background-image: none;
+        background-color: $color-principal;
+    }
 
+    #planeta {    
+        background-image: none;
+        background-color: $color-principal;
+    }
 
+    #satelites-naturales {    
+        background-image: none;
+        background-color: $color-principal;
+    }
+
+    #estrellas {    
+        background-image: none;
+        background-color: $color-principal;
+    }
+
+    #agujeros-negros {    
+        background-image: none;
+        background-color: $color-principal;
+    }
+
+    #galaxias {
+        background-image: none;
+        background-color: $color-principal;
+    }
+}
