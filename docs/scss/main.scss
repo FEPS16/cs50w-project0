@@ -68,7 +68,6 @@ $tipoPrincipal: Century Gothic, sans-serif;
     text-align: justify;
 }
 
-
 //estilos
 .lista-comun-desordenada {
     @extend %parrafo-comun;
@@ -152,36 +151,38 @@ div {
     padding-top: 1px;
 }
 
+//Fondos
 #asteroide{    
     background-image: url(../images/fondo-asteroides.jpg);
-    @extend %imagen-fondo
+    @extend %imagen-fondo;
 }
 
 #planeta{    
     background-image: url(../images/fondo-planetas.jpg);
-    @extend %imagen-fondo
+    @extend %imagen-fondo;
 }
 
 #satelites-naturales {    
     background-image: url(../images/fondo-satelites-naturales.jpg);
-    @extend %imagen-fondo
+    @extend %imagen-fondo;
 }
 
 #estrellas {    
     background-image: url(../images/fondo-estrella.jpg);
-    @extend %imagen-fondo
+    @extend %imagen-fondo;
 }
 
 #agujeros-negros {    
     background-image: url(../images/fondo-agujero-negro.jpg);
-    @extend %imagen-fondo
+    @extend %imagen-fondo;
 }
 
 #galaxias {    
     background-image: url(../images/fondo-galaxia.jpg);
-    @extend %imagen-fondo
+    @extend %imagen-fondo;
 }
 
+// Responsive
 @media only screen and (max-width: 767px) {
 
     #asteroide {    
